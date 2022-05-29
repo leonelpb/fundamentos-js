@@ -1,0 +1,434 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Comfortaa', cursive;
+    font-size: 16px;
+    background: rgba(0,0,0,0.3);
+}
+.titulo-seccion{
+    color: #fff;
+    font-size: 2.375rem;
+    margin-bottom: 15px;
+    font-weight: 500;
+    text-align: center;
+}
+.titulo-seccion p{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+}
+#container{
+    width:100%;
+    min-height:68px;
+    border-bottom: 1px solid rgba(134, 23, 23, 0.15);
+    padding: 0 36px;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    position: relative;
+    z-index: 100;
+    background: rgba(0,0,0,0.2);
+
+}
+.logo{
+    display: inline-block;
+    width: 50px;
+}
+.logo img{
+    width: 100%;
+    vertical-align: top;
+}
+/*fixed*/
+.fixed-header{
+    width: 100%;
+    min-height: 68px;
+    border-bottom: 1px solid rgba(204,204,204,0.5);
+    padding: 0 36px;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    transition: all .4s ease;
+    margin-top: -68px;
+  }
+  .fixed-header .menu-principal a, .fixed-header .top-redes a{
+    color: #444444;
+  }
+  
+  .fixed-header .menu-principal a:hover, .top-redes a:hover{
+    color: #0089E0;
+  }
+
+  
+  /*Version escritorio*/
+#container a,  .top-redes a{
+    display: inline-block;
+    padding: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.875rem;
+    letter-spacing: 0;
+    line-height: 1.5em;
+    transition: all .3s ease;
+}
+#container a:hover,  .top-redes a:hover{
+    color: #0089e0;
+}
+#container a:last-child,  .top-redes a:last-child{
+    padding-right: 0;
+}
+.top-redes a i{
+    font-size: 1rem;
+}
+/*banner*/
+.banner-principal{
+    width: 100%;
+    margin-top: -68px;
+    position: relative;
+    
+}
+ .banner-principal .banner {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    background-image: url(../img/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    ;
+}
+.banner-principal .texto-banner{
+    width: 90%;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+}
+.banner-principal .texto-banner h1{
+    font-size: 6.06rem;
+    font-weight: 500;
+    line-height: 90px;
+    color: #fff;
+
+}
+.banner-principal .texto-banner h2{
+    font-size: 3rem;
+    color: #fff;
+}
+
+/*seccion slide tomar mate*/
+.contenedor-slider{
+    width: 100%;
+    overflow: hidden;
+    background: #f3f3fa;
+    padding: 54px 0;
+    position: relative;
+}
+.contenedor-slider  .slider{
+    width: 400%;
+    display: flex;
+}
+.contenedor-slider .slider::before{
+    content: "";
+    position: absolute;
+    z-index: 99;
+    background: rgba(0,0,0,0.3);
+    width: 100;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+.contenedor-slider .slider .slide{
+    width: 15%;
+    max-width: 700px;
+    max-height: 338px;
+    box-shadow: 0px 20px 40px #aaa;
+    padding: 20px 20px 35px 20px;
+    margin: 5px;
+}
+.contenedor-slider .slider .slide img{
+    width: 100%;
+    height:100%;
+    vertical-align: top;
+}
+
+.contenedor-slider .titulo-seccion{
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width:60%;
+    z-index: 999;
+    color: #fff;
+
+}
+.contenedor-slider .titulo-seccion h2 {
+    font-size: 1.5rem;
+    background: rgba(0,0,0,0.3) ;
+}
+
+.contenedor-slider .btn-atras, .contenedor-slider .btn-siguiente{
+    display:inline-block;
+    cursor:pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+.contenedor-slider .btn-atras{
+    left: 2%;
+}
+.contenedor-slider .btn-siguiente{
+    right: 2%;
+}
+.contenedor-slider .btn-atras i, .contenedor-slider .btn-siguiente i {
+    color:#fff
+}
+.contenedor-slider .btn-atras i:hover, .contenedor-slider .btn-siguiente i:hover{
+    color:#8e44ad
+}
+.contenedor-slider .slider .slide h3{
+    position: relative;
+    align-items: center;
+    text-align: center;
+    top: 20%;
+    left: 35%;
+    width:30%;
+    z-index: 999;
+    color: #fff;
+    background:rgba(0,0,0,0.3);
+    padding: 2px;
+
+}
+.contenedor-slider .slider .slide a{
+    position: relative;
+    align-items: center;
+    text-align: center;
+    bottom: 10%;
+    left: 45%;
+    z-index: 999;
+    color: rgb(72, 161, 245);
+    background:rgba(0,0,0,0.3);
+    padding: 2px;
+    transform: translateX(-50%);
+    text-decoration: none;
+}
+/*Grid panaderias*/
+
+.panaderias-recomendadas{
+    text-align: center;
+    align-items: center;
+    padding: 5% 0;
+}
+.panaderias-recomendadas .grid-pana{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows:500px
+}
+.panaderias-recomendadas .grid-pana .panaderias{
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 600px;
+    max-height: 600px;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+}
+.panaderias-recomendadas .grid-pana .panaderias img{
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    object-fit: cover;
+}
+
+/*contacta a tu guia*/
+
+.contacto{
+    padding-top: 54px;
+    padding-bottom: 108px;
+}
+.contacto .contenedor .equipo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contacto  .contenedor .equipo .persona-equipo{
+    padding: 50px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0px 9px 32px -1px rgba(0,0,0,0.2);
+    margin: 50px;
+}
+.contacto .contenedor .equipo .persona-equipo:first-child, .contacto .contenedor .equipo .persona-equipo:last-child{
+    position: relative;
+    top: 20px;
+}
+.contacto .contenedor .equipo .persona-equipo .foto {
+    width: 50%;
+    max-width: 100px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.contacto .contenedor .equipo .persona-equipo .foto img{
+    width: 100%;
+    border-radius: 100%;
+}
+.contacto .contenedor .equipo .persona-equipo .texto h3 {
+font-size: 1.6rem;
+font-weight: 500;
+}
+.contacto .contenedor .equipo .persona-equipo .texto h4 {
+font-size: 0.8rem;
+font-weight: 400;
+margin-bottom: 15px;
+margin-top: 10px;
+} 
+.contacto .contenedor .equipo .persona-equipo .texto p {
+    font-weight: 400;
+    font-size: 0.9rem;
+
+} 
+
+/*formulario contacto*/
+
+.contacto2{
+    padding: 100px;
+    background-image: url(../img/cordobabg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.contacto2 .contenedor-formulario{
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 9px 32px -1px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: space-between;
+}
+.contacto2 .contenedor-formulario .formulario{
+    width: 50%;
+    padding: 30px;
+}
+.contacto2 .contenedor-formulario .formulario h2{
+    font-size: 1.375rem;
+    line-height: 24px;
+    margin-bottom: 50px;
+    font-weight: 500;
+}
+.contacto2 .contenedor-formulario .formulario .formulario-contacto .input-group{
+    position: relative;
+    margin-bottom: 2rem;
+}
+.contacto2 .contenedor-formulario form input[type='text'], .contacto2 .contenedor-formulario form input[type='email']{
+    font-size: 1rem;
+    width: 100%;
+    outline: none;
+    padding: 0.9375rem 0;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #9F9888;
+    vertical-align: top;
+
+}
+.contacto2 .contenedor-formulario form textarea{
+   font-size: 1rem;
+    width: 100%;
+    outline: none;
+    padding: 0.9375rem 0;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #9F9888;
+    vertical-align: top;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 5.125rem;
+    min-height: 5.125rem;
+}
+.contacto2 .contenedor-formulario form label{
+    color:#9F9888 ;
+}
+.contacto2 .contenedor-formulario .formulario .formulario-contacto label[class~="label"]{
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    line-height: 1rem;
+    font-size: 1rem;
+    margin-left: 1rem;
+    transition: all .3s ease;
+}
+.contacto2 .contenedor-formulario .formulario .formulario-contacto .input-group label.label.active{
+    top: -0.75rem;
+    margin-left: 0;
+    font-size:0.75rem;
+    line-height: 0.75rem;
+}
+
+.contacto2 .contenedor-formulario .formulario .formulario-contacto .input-group .error{
+    position: absolute;
+    color: rgb(255,59,59);
+    font-size: 0.875rem;
+}
+.contacto2 .contenedor-formulario .formulario form input[type="submit"]{
+    width: 100%;
+    border: none;
+    padding: 8px;
+    font-size: 0.9rem;
+    font-family: 'Comfortaa', cursive;
+    letter-spacing: 0.5px;
+    transition: all .7s ease;
+    border: 1px solid #0089E0;
+    margin-top: 3rem;
+    outline: none;
+}
+.contacto2 .contenedor-formulario .formulario form input[type="submit"]:hover{
+    background: #fff;
+}
+.contacto2 .contenedor-formulario .foto{
+  background-image: url('../img/mateform.jpg');
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* ------ PIE DE PÁGINA ------ */
+
+footer{
+  padding: 54px 0;
+  text-align: center;
+}
+
+footer .copy{
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+footer .footer-redes a{
+  display: inline-block;
+  padding: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0;
+  line-height: 1.5em;
+  transition: all .3s ease;
+  color: #444444;
+}
+
