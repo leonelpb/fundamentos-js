@@ -250,27 +250,25 @@ body{
 .panaderias-recomendadas{
     text-align: center;
     align-items: center;
-    padding: 5% 0;
+    padding: 5%;
 }
 .panaderias-recomendadas .grid-pana{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-auto-rows:500px
+    gap: 3rem;
+    grid-auto-rows: 22rem;
+    grid-template-columns: repeat(auto-fit,minmax(10rem, 1fr));
+
 }
 .panaderias-recomendadas .grid-pana .panaderias{
+   grid-column: span 2;
     border: 1px solid #ccc;
     padding: 20px;
-    max-width: 600px;
-    max-height: 600px;
-    width: 500px;
-    height: 500px;
-    margin: auto;
+    
 }
 .panaderias-recomendadas .grid-pana .panaderias img{
     width: 100%;
     height: 100%;
-    padding: 50px;
-    object-fit: cover;
+    padding: 36px;;
 }
 
 /*contacta a tu guia*/
@@ -278,6 +276,11 @@ body{
 .contacto{
     padding-top: 54px;
     padding-bottom: 108px;
+}
+.contacto .contenedor{
+    width: 90%;
+    max-width: 1080px;
+    margin: 0 auto;
 }
 .contacto .contenedor .equipo{
     display: flex;
@@ -291,7 +294,6 @@ body{
     max-width: 300px;
     text-align: center;
     box-shadow: 0px 9px 32px -1px rgba(0,0,0,0.2);
-    margin: 50px;
 }
 .contacto .contenedor .equipo .persona-equipo:first-child, .contacto .contenedor .equipo .persona-equipo:last-child{
     position: relative;
@@ -450,20 +452,20 @@ footer .footer-redes a{
 
 @media screen and (max-width:1040px){
   /*contacto*/
-  .contacto .titulo-seccion{
+  .contacto .contenedor .titulo-seccion{
     margin-bottom: 60px;
   }
-  .contacto .equipo .persona-equipo{
+  .contacto .contenedor .equipo .persona-equipo{
     max-width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     text-align: left;
   }
-  .contacto .equipo .persona-equipo:first-child{
+  .contacto .contenedor .equipo .persona-equipo:first-child{
     top: -20px;
   }
- .contacto .equipo .persona-equipo .foto{
+ .contacto .contenedor .equipo .persona-equipo .foto{
     margin-right: 20px;
   }
 
@@ -491,7 +493,7 @@ footer .footer-redes a{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 10000;
   }
   .menu-mobile .barra{
     display: flex;
@@ -563,10 +565,10 @@ footer .footer-redes a{
   .titulo-seccion h2{
     font-size: 2.125rem;
   }
-  
+  }
   /*Nuestro equipo*/
   .contacto .contenedor .equipo .persona-equipo{
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     text-align: center;
   }
