@@ -46,7 +46,8 @@ body{
 /*fixed*/
 .fixed-header{
     width: 100%;
-    min-height: 68px;
+    min-height: 50px;
+    max-height: 50px;
     border-bottom: 1px solid rgba(204,204,204,0.5);
     padding: 0 36px;
     background: #fff;
@@ -56,16 +57,27 @@ body{
     align-items: center;
     position: fixed;
     top: 0;
-    z-index: 100;
+    z-index: 10000;
     transition: all .4s ease;
     margin-top: -68px;
   }
   .fixed-header .menu-principal a, .fixed-header .top-redes a{
     color: #444444;
+    padding: 0 10px;
+    letter-spacing: 0;
   }
   
   .fixed-header .menu-principal a:hover, .top-redes a:hover{
     color: #0089E0;
+  }
+  .fixed-header .logo{
+    display: inline-block;
+    width: 50px;
+    padding: 5px;
+  }
+  .fixed-header .logo img{
+    width: 100%;
+    vertical-align: top;
   }
 
   
@@ -89,6 +101,10 @@ body{
 }
 .top-redes a i{
     font-size: 1rem;
+}
+/*version mobile*/
+.menu-mobile{
+    display: none;
 }
 /*banner*/
 .banner-principal{
@@ -432,3 +448,130 @@ footer .footer-redes a{
   color: #444444;
 }
 
+@media screen and (max-width:1040px){
+  /*contacto*/
+  .contacto .titulo-seccion{
+    margin-bottom: 60px;
+  }
+  .contacto .equipo .persona-equipo{
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+  }
+  .contacto .equipo .persona-equipo:first-child{
+    top: -20px;
+  }
+ .contacto .equipo .persona-equipo .foto{
+    margin-right: 20px;
+  }
+
+  /*contacto 2*/
+  .contacto2 .contenedor-formulario .formulario {
+    width: 100%;
+  }
+  .contacto2 .contenedor-formulario .foto{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px){
+  /*Encabezado*/ 
+  #container{
+    display: none;
+  }
+
+  .menu-mobile{
+    display: block;
+    width: 100%;
+    padding: 5px 18px;
+    background: #fff;
+    color: #444444;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+  .menu-mobile .barra{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu-mobile .barra .logo{
+    width: 40px;
+  }
+  .menu-mobile .barra a i{
+    font-size: 1.4rem;
+    color: #444444;
+  }
+
+  .menu-mobile .menu-principal{
+    width: 80%;
+    display: block;
+    position: fixed;
+    top: 56px;
+    left: -100%;
+    border-bottom: 1px solid rgba(204,204,204,0.5);
+    border-right: 1px solid rgba(204,204,204,0.5);
+    box-shadow: 0px 1px 5px -1px rgba(0,0,0,0.2);
+    background: #fff;
+    text-align: center;
+  }
+
+  .menu-mobile .menu-principal a{
+    display: block;
+    padding: 10px;
+    color: #444444;
+    border-bottom: 1px solid rgba(204,204,204,0.5);
+  }
+
+  .menu-mobile .menu-principal a:hover{
+    background: #f7f7f7;
+  }
+  .fixed-header{
+    display: none;
+  }
+
+  /*Main*/
+  *{
+    margin-top: 0;
+  }
+
+  /*Contacto*/
+  .contacto2 .contenedor-formulario .formulario{
+    width: 100%;
+    text-align: center;
+  }
+
+  .main .contacto .contenedor-formulario .foto{
+    display: none;
+  }
+
+  .main .contacto .contenedor-formulario .formulario form input[type="text"], .main .contacto .contenedor-formulario .formulario form input[type="email"], .main .contacto .contenedor-formulario .formulario form textarea{
+    text-align: center;
+  }
+
+}
+
+@media screen and (max-width:550px){
+  /*Banner principal*/
+  .banner-principal .texto-banner h1{
+    font-size: 4rem;
+  }
+  /*Titulo secciones*/
+  .titulo-seccion h2{
+    font-size: 2.125rem;
+  }
+  
+  /*Nuestro equipo*/
+  .contacto .contenedor .equipo .persona-equipo{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  /*Contacto*/
+  .contacto2 .contenedor-formulario .formulario{
+    padding: 70px 40px;
+  }
+}

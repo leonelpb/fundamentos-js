@@ -12,14 +12,32 @@
 </head>
 <body>
     <header>
+         <!-- Versión móvil -->
+      <div class="menu-mobile">
+        <div class="barra">
+         <a href="#" class="logo"><img src="img/logo.png" alt="logo"></a>
+          <a href="#" id="btnMenu">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </a>
+        </div>
+      
+            <nav class="menu-principal">
+            <a href="#">Inicio</a>
+            <a href="#tomarmate"class="scroll-suave">Tomar mate!</a>
+            <a href="#panaderias"class="scroll-panaderias">Panaderias</a>
+            <a href="#bares"class="scroll-bares">Bares</a>
+            <a href="#contacto" class="scroll-suave" >Contacto</a>
+            </nav>
+      </div>
+
         <div id="container">
             <a href="#" class="logo"><img src="img/logo.png" alt="logo"></a>
             <nav>
             <a href="#">Inicio</a>
-            <a href="#">Tomar mate!</a>
-            <a href="#">Panaderias recomendadas</a>
-            <a href="#">Bares</a>
-            <a href="#">Contacta a tu guia</a>
+            <a href="#tomarmate"class="scroll-suave">Tomar mate!</a>
+            <a href="#panaderias"class="scroll-panaderias">Panaderias</a>
+            <a href="#bares"class="scroll-bares">Bares</a>
+            <a href="#contacto" class="scroll-suave" >Contacto</a>
             </nav>
             <div class="top-redes">
                 <a href="#">
@@ -40,26 +58,29 @@
               <img src="img/logo.png" alt="logo">
             </a>
             <nav class="menu-principal">
-              <a href="#" class="volver-arriba">INICIO</a>
-              <a href="#proyectos" class="scroll-suave">PROYECTOS</a>
-              <a href="#acercaDe" class="scroll-acercaDe">ACERCA DE</a>
-              <a href="#equipo" class="scroll-equipo">NUESTRO EQUIPO</a>
-              <a href="#contacto" class="scroll-suave">CONTACTO</a>
+              <a href="#" class="volver-arriba">Inicio</a>
+              <a href="#tomarmate" class="scroll-suave">Tomar mate!</a>
+              <a href="#panaderias" class="scroll-panaderias">Panaderias</a>
+              <a href="#bares" class="scroll-bares">Bares</a>
+              <a href="#contacto" class="scroll-suave">Contacto</a>
             </nav>
             <div class="top-redes">
-              <a href="#">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-              <a href="#">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-              <a href="#">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-              </a>
+                <a href="#">
+                    <i class="fa-brands fa-facebook-square"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-pinterest-square"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-instagram-square"></i>
+                </a>
             </div>
           </div>
 
+
+
     </header>
+    <!--banner-->
     <section class="banner-principal">
        <div class="banner" id="banner"></div>
        <div class="texto-banner"> 
@@ -67,7 +88,8 @@
         <h2>ciudad bonita</h2>
         </div>
     </section>
-    <section class="contenedor-slider">
+    <!--plaza recomendadas-->
+    <section class="contenedor-slider" id="tomarmate">
         <div class="titulo-seccion">
             <h2>Estas son los mejores sitios donde podes disfrutar de un mate</h2>
         </div>
@@ -101,7 +123,9 @@
 
         </div>
     </section>
-    <section class="panaderias-recomendadas">
+
+    <!--panaderias recomendadas-->
+    <section class="panaderias-recomendadas" id="panaderias">
         <div class="titulo-seccion">
             <h2>Las mejores panaderias</h2>
         </div>
@@ -128,7 +152,8 @@
             </div>
         </div>
     </section>
-    <section class="contenedor-slider">
+    <!--bares-->
+    <section class="contenedor-slider" id="bares">
         <div class="titulo-seccion">
             <h2>Estas son los mejores bares donde podes disfrutar de una birra</h2>
         </div>
@@ -161,7 +186,8 @@
             <i class="fa fa-arrow-left" aria-hidden="true"></i>       
         </div>
     </section>
-    <section class="contacto">
+    <!--contacto-->
+    <section class="contacto" id="contacto">
         <div class="contenedor">
             <div class="titulo-seccion">
                 <h2>Contacta a tu guia</h2>
@@ -232,7 +258,7 @@
         </div>
     </div>
 
-
+    <!--pie de pagina-->
     <footer>  
         <div class="copy">
             <p>Todos los derechos reservados </p>
@@ -257,5 +283,7 @@
     <script src="js/slider2.js"></script>
     <script src="js/bgparallax.js"></script>
     <script src="js/formulario.js"></script>
+    <script src="js/stickyheader.js"></script>
+    <script src="js/menumobile.js"></script>
 </body>
 </html>
