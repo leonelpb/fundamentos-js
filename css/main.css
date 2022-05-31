@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 0%;
 }
 body{
     font-family: 'Comfortaa', cursive;
@@ -157,6 +157,7 @@ body{
 .contenedor-slider  .slider{
     width: 400%;
     display: flex;
+    max-height:500px;
 }
 .contenedor-slider .slider::before{
     content: "";
@@ -170,16 +171,18 @@ body{
 }
 .contenedor-slider .slider .slide{
     width: 15%;
-    max-width: 700px;
-    max-height: 338px;
+    max-width: 980px;
     box-shadow: 0px 20px 40px #aaa;
-    padding: 20px 20px 35px 20px;
-    margin: 5px;
+    margin:0.7%;
+    max-height: 750px;
 }
 .contenedor-slider .slider .slide img{
     width: 100%;
     height:100%;
     vertical-align: top;
+    object-fit: cover;
+    max-width: 100%;
+    min-height: 100%;
 }
 
 .contenedor-slider .titulo-seccion{
@@ -187,15 +190,15 @@ body{
     align-items: center;
     text-align: center;
     top: 50%;
-    left: 50%;
+    left: 52%;
     transform: translate(-50%,-50%);
-    width:60%;
+    width:50%;
     z-index: 999;
     color: #fff;
 
 }
 .contenedor-slider .titulo-seccion h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     background: rgba(0,0,0,0.3) ;
 }
 
@@ -223,9 +226,9 @@ body{
     position: relative;
     align-items: center;
     text-align: center;
-    top: 20%;
-    left: 35%;
-    width:30%;
+    top: 9%;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 999;
     color: #fff;
     background:rgba(0,0,0,0.3);
@@ -343,6 +346,7 @@ margin-top: 10px;
 .contacto2 .contenedor-formulario .formulario{
     width: 50%;
     padding: 30px;
+    min-height: 200px;
 }
 .contacto2 .contenedor-formulario .formulario h2{
     font-size: 1.375rem;
@@ -545,13 +549,8 @@ footer .footer-redes a{
     width: 100%;
     text-align: center;
   }
-
-  .main .contacto .contenedor-formulario .foto{
+ .contacto2.contenedor-formulario .foto{
     display: none;
-  }
-
-  .main .contacto .contenedor-formulario .formulario form input[type="text"], .main .contacto .contenedor-formulario .formulario form input[type="email"], .main .contacto .contenedor-formulario .formulario form textarea{
-    text-align: center;
   }
 
 }
@@ -565,15 +564,38 @@ footer .footer-redes a{
   .titulo-seccion h2{
     font-size: 2.125rem;
   }
+  /*contenedor slider*/
+
+  .contenedor-slider .slider .slide a{
+     left: 40%;
   }
+  .contenedor-slider .titulo-seccion h2 {
+    font-size: 1rem;
+
+
+ }
+ .contenedor-slider .slider .slide h3{
+    font-size: 1rem;
+ }
   /*Nuestro equipo*/
   .contacto .contenedor .equipo .persona-equipo{
     flex-direction: row;
     align-items: center;
     text-align: center;
   }
+
   /*Contacto*/
   .contacto2 .contenedor-formulario .formulario{
-    padding: 70px 40px;
+    height: 400px;
+  }
+  .contacto2 .contenedor-formulario .formulario h2{
+    font-size: 1rem;
+    margin-bottom: 10px;
+  } 
+  .contacto2 .contenedor-formulario .formulario{
+    padding: 10px 20px;
+  }
+  .contacto2 .contenedor-formulario .formulario form input[type='submit']{
+    margin-top: -6px;
   }
 }
